@@ -1,0 +1,815 @@
+{
+	"info": {
+		"_postman_id": "9bfc77ea-47c8-4858-85ff-4c7677a75ea1",
+		"name": "POC SNAP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "35364150",
+		"_collection_link": "https://dark-zodiac-58374.postman.co/workspace/ADIRA-SNAP~bd061f6d-1ab5-4e83-ab42-4d75131c571e/collection/35364150-9bfc77ea-47c8-4858-85ff-4c7677a75ea1?action=share&source=collection_link&creator=35364150"
+	},
+	"item": [
+		{
+			"name": "SNAP - Generate Signature Access Token V1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "Administrator",
+						"password": "manage"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientId\": \"3a0f552d-f785-4cec-afe1-7748525e8efb\",\r\n    \"timestampRequest\": \"2024-05-28T14:41:10+07:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://184.169.41.93:5555/api/v1/utilities/signature-auth"
+			},
+			"response": [
+				{
+					"name": "signature v1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\": \"3a0f552d-f785-4cec-afe1-7748525e8efb\",\r\n    \"timestampRequest\": \"2024-05-28T14:41:10+07:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://184.169.41.93:5555/api/v1/utilities/signature-auth"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Length",
+							"value": "325"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"signature\": \"TiH7zpgBNB/y3F0m1BnDPYr8lBjm7vFd4CJYeVWz5zC1gikrzSI/VdrhXcELzDt/GmnPGiGQUopOS12s4iZMjVmGIextU1jpXXa7ouVLxx7gdNEJ7yP5j8EE9rR7DnwaCU4dhNiNUGc/2PNqDJihWGApDbzHjgvA/aPZW8/WNLog6UM/VQbyCIqCSilqYChcU6Foy357buR+Yqbk0lS+1F2rmvGHZrcj5LiiN0+qVjToqgCz3MBj3wMdGowqnA4nfkxI8bc9k5qvWXRliAe6PL/wiQmpLVroDbABBKL4iWwVtk8yzLuW14GoEV/IogX0Lr6PRPpszJlM4KnXi2z9HA==\"\n}"
+				}
+			]
+		},
+		{
+			"name": "SNAP - Generate Signature Access Token V2",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "Administrator",
+						"password": "manage"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientId\": \"3a0f552d-f785-4cec-afe1-7748525e8efb\",\r\n    \"timestampRequest\": \"2024-05-28T14:41:10+07:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://184.169.41.93:5555/api/v2/utilities/signature-auth"
+			},
+			"response": [
+				{
+					"name": "signature v2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\": \"3a0f552d-f785-4cec-afe1-7748525e8efb\",\r\n    \"timestampRequest\": \"2024-05-28T14:41:10+07:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://184.169.41.93:5555/api/v2/utilities/signature-auth"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Length",
+							"value": "330"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"signature\": \"4e21fbce9801341ff2dc5d26d419c33d8afc9418e6eef15de022587955b3e730b582292bcd223f55dae15dc10bcc3b7f1a69cf1a2190528a4e4b5dace2264c8d598621ec6d5358e95d76bba2e54bc71ee074d109ef23f98fc104f6b47b0e7c1a094e1d84d88d50673fd8f36a0c98a15860290dbcc78e0bc0fda3d95bcfd634ba20e9433f5506f2088a824a296a60285c53a168cb7e7b6ee47e62a6e4d254bed45dab9af18766b723e4b8a2374faa5634e8aa00b3dcc063df031d1a8c2a9c0e277e4c48f1b73d939aaf5974658807ba3cbff08909a92d5ae80db00104a2f8896c15b64f32ccbb96d781a8115fc8a205f42ebe8f44fa6ccc994ce0a9d78b6cfd1c\"\n}"
+				}
+			]
+		},
+		{
+			"name": "SNAP - Generate Signature Service V1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "Administrator",
+						"password": "manage"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"secretKey\":\"1235-5678-917432\",\r\n    \"httpMethod\":\"POST\",\r\n    \"requestUrl\":\"/gateway/apiSnap/v1.0/inquiry\",\r\n    \"accessToken\":\"2134365464766587698769767653463\",\r\n    \"timestamp\":\"2024-05-28T14:41:10+07:00\",\r\n    \"payload\":\"{\\\"partnerServiceId\\\":\\\"123451234567890\\\",\\\"customerNo\\\":\\\"123456789012345678\\\",\\\"virtualAccountNo\\\":\\\"12345123456789012345678\\\",\\\"trxDateInit\\\":\\\"2022-02-12T17:29:57+07:00\\\",\\\"channelCode\\\":6011,\\\"language\\\":\\\"\\\",\\\"amount\\\":{\\\"value\\\":\\\"100000.00\\\",\\\"currency\\\":\\\"IDR\\\"},\\\"hashedSourceAccountNo\\\":\\\"\\\",\\\"sourceBankCode\\\":\\\"014\\\",\\\"additionalInfo\\\":{},\\\"passApp\\\":\\\"\\\",\\\"inquiryRequestId\\\":\\\"202202110909311234500001136962\\\"}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://184.169.41.93:5555/api/v1/utilities/signature-service"
+			},
+			"response": [
+				{
+					"name": "signature service v1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"requestUrl\":\"/gateway/apiSnap/v1.0/inquiry\",\r\n    \"accessToken\":\"2134365464766587698769767653463\",\r\n    \"timestamp\":\"2024-05-28T14:41:10+07:00\",\r\n    \"payload\":\"{\\\"partnerServiceId\\\":\\\"123451234567890\\\",\\\"customerNo\\\":\\\"123456789012345678\\\",\\\"virtualAccountNo\\\":\\\"12345123456789012345678\\\",\\\"trxDateInit\\\":\\\"2022-02-12T17:29:57+07:00\\\",\\\"channelCode\\\":6011,\\\"language\\\":\\\"\\\",\\\"amount\\\":{\\\"value\\\":\\\"100000.00\\\",\\\"currency\\\":\\\"IDR\\\"},\\\"hashedSourceAccountNo\\\":\\\"\\\",\\\"sourceBankCode\\\":\\\"014\\\",\\\"additionalInfo\\\":{},\\\"passApp\\\":\\\"\\\",\\\"inquiryRequestId\\\":\\\"202202110909311234500001136962\\\"}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://184.169.41.93:5555/api/v1/utilities/signature-service"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Length",
+							"value": "133"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"generatedSignature\": \"8s2xlXzYplIKHDh/rmnVZ+SWQYzHSobxjHk2QGsgvtI1t2UesEXqst+osmOysP2nZJwsQsYK4bziEEcfOIot+g==\"\n}"
+				}
+			]
+		},
+		{
+			"name": "SNAP - Generate Signature Service V2",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "Administrator",
+						"password": "manage"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"secretKey\":\"1235-5678-917432\",\r\n    \"httpMethod\":\"POST\",\r\n    \"requestUrl\":\"/gateway/apiSnap/v1.0/inquiry\",\r\n    \"accessToken\":\"2134365464766587698769767653463\",\r\n    \"timestamp\":\"2024-05-28T14:41:10+07:00\",\r\n    \"payload\":\"{\\\"partnerServiceId\\\":\\\"123451234567890\\\",\\\"customerNo\\\":\\\"123456789012345678\\\",\\\"virtualAccountNo\\\":\\\"12345123456789012345678\\\",\\\"trxDateInit\\\":\\\"2022-02-12T17:29:57+07:00\\\",\\\"channelCode\\\":6011,\\\"language\\\":\\\"\\\",\\\"amount\\\":{\\\"value\\\":\\\"100000.00\\\",\\\"currency\\\":\\\"IDR\\\"},\\\"hashedSourceAccountNo\\\":\\\"\\\",\\\"sourceBankCode\\\":\\\"014\\\",\\\"additionalInfo\\\":{},\\\"passApp\\\":\\\"\\\",\\\"inquiryRequestId\\\":\\\"202202110909311234500001136962\\\"}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://184.169.41.93:5555/api/v2/utilities/signature-service"
+			},
+			"response": [
+				{
+					"name": "signature service v2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"secretKey\":\"1235-5678-917432\",\r\n    \"httpMethod\":\"POST\",\r\n    \"requestUrl\":\"/gateway/apiSnap/v1.0/inquiry\",\r\n    \"accessToken\":\"2134365464766587698769767653463\",\r\n    \"timestamp\":\"2024-05-28T14:41:10+07:00\",\r\n    \"payload\":\"{\\\"partnerServiceId\\\":\\\"123451234567890\\\",\\\"customerNo\\\":\\\"123456789012345678\\\",\\\"virtualAccountNo\\\":\\\"12345123456789012345678\\\",\\\"trxDateInit\\\":\\\"2022-02-12T17:29:57+07:00\\\",\\\"channelCode\\\":6011,\\\"language\\\":\\\"\\\",\\\"amount\\\":{\\\"value\\\":\\\"100000.00\\\",\\\"currency\\\":\\\"IDR\\\"},\\\"hashedSourceAccountNo\\\":\\\"\\\",\\\"sourceBankCode\\\":\\\"014\\\",\\\"additionalInfo\\\":{},\\\"passApp\\\":\\\"\\\",\\\"inquiryRequestId\\\":\\\"202202110909311234500001136962\\\"}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://184.169.41.93:5555/api/v2/utilities/signature-service"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"generatedSignature\": \"3cde7acd884f93a12abae2a2b4403645f5e7b68e8d385fe0de6c78e91caa97446a311f6fc700c829dba945137a1036382c5820448855fc2b083afdf070eb4894\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET all applications",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "Administrator",
+						"password": "manage"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://184.169.41.93:5555/rest/apigateway/applications"
+			},
+			"response": [
+				{
+					"name": "GET applications",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://184.169.41.93:5555/rest/apigateway/applications"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2852"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"applications\": [\n        {\n            \"name\": \"internal-muf\",\n            \"description\": null,\n            \"contactEmails\": [],\n            \"identifiers\": [\n                {\n                    \"id\": \"49ae3bfb-a6b6-437c-8fcd-8d3aec5496a8\",\n                    \"name\": \"Username\",\n                    \"key\": \"httpBasicAuth\",\n                    \"value\": [\n                        \"internal-muf\"\n                    ]\n                }\n            ],\n            \"siteURLs\": [],\n            \"jsOrigins\": [],\n            \"authStrategyIds\": [],\n            \"version\": \"1.0\",\n            \"id\": \"aa0ba1a1-b1a3-461b-9d08-3efb548ac3e6\",\n            \"created\": \"2024-09-04 03:37:14 GMT\",\n            \"lastupdated\": null,\n            \"owner\": \"Administrator\",\n            \"ownerType\": \"user\",\n            \"subscription\": false,\n            \"consumingAPIs\": [\n                \"d1921973-455d-4474-b165-6a0609c46a88\"\n            ],\n            \"teams\": [],\n            \"accessTokens\": {\n                \"apiAccessKey_credentials\": {\n                    \"apiAccessKey\": \"9f283b13-ddb9-4d52-ad64-06d488017c52\",\n                    \"expirationInterval\": null,\n                    \"expirationDate\": null,\n                    \"expired\": false\n                }\n            }\n        },\n        {\n            \"name\": \"test-05\",\n            \"description\": \"\",\n            \"identifiers\": [\n                {\n                    \"id\": \"6b160257-a43a-4eb4-8f3d-28c1d5fa19a0\",\n                    \"name\": \"JWT default claims set\",\n                    \"key\": \"jwtClaims\",\n                    \"value\": [\n                        \"{\\\"app_id\\\":\\\"9d8a58d5-96b8-4e14-9052-3e3be8fd739c\\\"}\"\n                    ]\n                }\n            ],\n            \"siteURLs\": [],\n            \"jsOrigins\": [],\n            \"authStrategyIds\": [\n                \"04e08042-d823-4b73-a473-41aa4d605c07\"\n            ],\n            \"version\": \"1.0\",\n            \"id\": \"9d8a58d5-96b8-4e14-9052-3e3be8fd739c\",\n            \"created\": \"2024-09-20 08:48:58 GMT\",\n            \"lastupdated\": null,\n            \"owner\": \"c03ff4fa-4af1-3506-a439-926a437c25e3\",\n            \"ownerType\": \"user\",\n            \"subscription\": true,\n            \"customFields\": {\n                \"API_PORTAL_USERNAME\": \"sang.wiranatha@mii.co.id\"\n            },\n            \"consumingAPIs\": [\n                \"18a3fcde-a5b0-4361-83a9-c07dbf5134e3\"\n            ],\n            \"teams\": [],\n            \"accessTokens\": {\n                \"apiAccessKey_credentials\": {\n                    \"apiAccessKey\": \"********************************\",\n                    \"expirationInterval\": null,\n                    \"expirationDate\": null,\n                    \"expired\": false\n                }\n            }\n        },\n        {\n            \"name\": \"test-06\",\n            \"description\": \"\",\n            \"identifiers\": [\n                {\n                    \"id\": \"9b12e60f-8d2e-4744-9cc6-deeadbfa6cbc\",\n                    \"name\": \"JWT default claims set\",\n                    \"key\": \"jwtClaims\",\n                    \"value\": [\n                        \"{\\\"app_id\\\":\\\"708ef75b-1858-4002-a07f-7f1e6bd94bd5\\\"}\"\n                    ]\n                }\n            ],\n            \"siteURLs\": [],\n            \"jsOrigins\": [],\n            \"authStrategyIds\": [\n                \"c8d46a2c-5b12-4973-9103-becef9f859ad\"\n            ],\n            \"version\": \"1.0\",\n            \"id\": \"708ef75b-1858-4002-a07f-7f1e6bd94bd5\",\n            \"created\": \"2024-09-20 08:51:02 GMT\",\n            \"lastupdated\": null,\n            \"owner\": \"c03ff4fa-4af1-3506-a439-926a437c25e3\",\n            \"ownerType\": \"user\",\n            \"subscription\": true,\n            \"customFields\": {\n                \"API_PORTAL_USERNAME\": \"sang.wiranatha@mii.co.id\"\n            },\n            \"consumingAPIs\": [\n                \"18a3fcde-a5b0-4361-83a9-c07dbf5134e3\"\n            ],\n            \"teams\": [],\n            \"accessTokens\": {\n                \"apiAccessKey_credentials\": {\n                    \"apiAccessKey\": \"********************************\",\n                    \"expirationInterval\": null,\n                    \"expirationDate\": null,\n                    \"expired\": false\n                }\n            }\n        },\n        {\n            \"name\": \"bca\",\n            \"description\": null,\n            \"contactEmails\": [],\n            \"identifiers\": [],\n            \"siteURLs\": [],\n            \"jsOrigins\": [],\n            \"authStrategyIds\": [\n                \"393d9dbc-3caa-4537-b546-169415da2329\"\n            ],\n            \"version\": \"1.0\",\n            \"id\": \"3a0f552d-f785-4cec-afe1-7748525e8efb\",\n            \"created\": \"2024-05-16 07:12:18 GMT\",\n            \"lastupdated\": \"2024-05-22 13:54:41 GMT\",\n            \"owner\": \"Administrator\",\n            \"ownerType\": \"user\",\n            \"subscription\": false,\n            \"consumingAPIs\": [\n                \"30fc0dc7-9117-484e-bae9-b0ecb929e962\"\n            ],\n            \"teams\": [],\n            \"accessTokens\": {\n                \"apiAccessKey_credentials\": {\n                    \"apiAccessKey\": \"8a0b4a8d-5fc1-4f85-8bb1-3eef96cc87ef\",\n                    \"expirationInterval\": null,\n                    \"expirationDate\": null,\n                    \"expired\": false\n                }\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET applications by id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "Administrator",
+						"password": "manage"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://184.169.41.93:5555/rest/apigateway/applications/95084484-617c-4398-94b6-6c9af38590da"
+			},
+			"response": [
+				{
+					"name": "GET applications BCA",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://184.169.41.93:5555/rest/apigateway/applications/3a0f552d-f785-4cec-afe1-7748525e8efb"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "608"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"applications\": [\n        {\n            \"name\": \"bca\",\n            \"description\": null,\n            \"contactEmails\": [],\n            \"identifiers\": [],\n            \"siteURLs\": [],\n            \"jsOrigins\": [],\n            \"authStrategyIds\": [\n                \"393d9dbc-3caa-4537-b546-169415da2329\"\n            ],\n            \"version\": \"1.0\",\n            \"id\": \"3a0f552d-f785-4cec-afe1-7748525e8efb\",\n            \"created\": \"2024-05-16 07:12:18 GMT\",\n            \"lastupdated\": \"2024-05-22 13:54:41 GMT\",\n            \"owner\": \"Administrator\",\n            \"ownerType\": \"user\",\n            \"subscription\": false,\n            \"consumingAPIs\": [\n                \"30fc0dc7-9117-484e-bae9-b0ecb929e962\"\n            ],\n            \"teams\": [],\n            \"accessTokens\": {\n                \"apiAccessKey_credentials\": {\n                    \"apiAccessKey\": \"8a0b4a8d-5fc1-4f85-8bb1-3eef96cc87ef\",\n                    \"expirationInterval\": null,\n                    \"expirationDate\": null,\n                    \"expired\": false\n                }\n            }\n        }\n    ]\n}"
+				},
+				{
+					"name": "GET applications by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://184.169.41.93:5555/rest/apigateway/applications/95084484-617c-4398-94b6-6c9af38590da"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "575"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"applications\": [\n        {\n            \"name\": \"mii-snap\",\n            \"description\": null,\n            \"contactEmails\": [],\n            \"identifiers\": [],\n            \"siteURLs\": [],\n            \"jsOrigins\": [],\n            \"authStrategyIds\": [\n                \"055c452a-60c5-4961-abbb-92393da77e31\"\n            ],\n            \"version\": \"1.0\",\n            \"id\": \"95084484-617c-4398-94b6-6c9af38590da\",\n            \"created\": \"2024-10-07 03:53:45 GMT\",\n            \"lastupdated\": \"2024-10-07 04:01:27 GMT\",\n            \"owner\": \"Administrator\",\n            \"ownerType\": \"user\",\n            \"subscription\": false,\n            \"consumingAPIs\": [],\n            \"teams\": [],\n            \"accessTokens\": {\n                \"apiAccessKey_credentials\": {\n                    \"apiAccessKey\": \"953da52a-732d-47c9-b0b7-59ac8b98746d\",\n                    \"expirationInterval\": null,\n                    \"expirationDate\": null,\n                    \"expired\": false\n                }\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Access Token B2B",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"//var timestamp = new Date().toISOString();\r",
+							"var moment = require('moment');\r",
+							"var timestamp = moment().format(\"YYYY-MM-DDTHH:mm:ssZ\");\r",
+							"\r",
+							"var clientId = pm.environment.get('X-CLIENT-KEY');\r",
+							"var host = pm.environment.get('baseUrl');\r",
+							"var url = host + \"/invoke/KomiCommonSNAPClient.services:restCreateOauth\"\r",
+							"console.log(timestamp, clientId, url)\r",
+							"pm.environment.set('timestamp', timestamp);\r",
+							"pm.sendRequest({\r",
+							"    url: url,\r",
+							"    method: 'POST',\r",
+							"    header: {\r",
+							"        'Accept': 'application/json',\r",
+							"        'Content-Type': 'application/json',\r",
+							"        'Authorization': 'Basic QWRtaW5pc3RyYXRvcjptYW5hZ2U='\r",
+							"    },\r",
+							"    body: {\r",
+							"        mode: 'raw',\r",
+							"        raw: JSON.stringify({\r",
+							"            \"clientId\": clientId,\r",
+							"            \"timestampRequest\": timestamp\r",
+							"        })\r",
+							"    }\r",
+							"}, function (err, res) {\r",
+							"    console.log(res.json().signature);\r",
+							"    pm.environment.set(\"X-SIGNATURE\", res.json().signature);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"if (responseCode.code === 200) {\r",
+							"    pm.environment.set(\"token\", jsonData.accessToken);\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CLIENT-KEY",
+						"value": "{{X-CLIENT-KEY}}",
+						"type": "text"
+					},
+					{
+						"key": "X-SIGNATURE",
+						"value": "{{X-SIGNATURE}} ",
+						"type": "text"
+					},
+					{
+						"key": "X-TIMESTAMP",
+						"value": "{{timestamp}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"grantType\": \"client_credentials\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://184.169.41.93:5555/openapi/v1.0/access-token/b2b"
+			},
+			"response": [
+				{
+					"name": "Access Token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CLIENT-KEY",
+								"value": "{{X-CLIENT-KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "X-SIGNATURE",
+								"value": "{{X-SIGNATURE}} ",
+								"type": "text"
+							},
+							{
+								"key": "X-TIMESTAMP",
+								"value": "{{timestamp}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"grant_type\": \"client_credentials\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://api-priv-dev.adira.co.id/openapi/v1.0/access-token/b2b"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Set-Cookie",
+							"value": "ssnid=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT;"
+						},
+						{
+							"key": "Content-type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Length",
+							"value": "172"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"2007300\",\n    \"responseMessage\": \"Successful\",\n    \"accessToken\": \"434dbdf706434ca4a121d95a0d4a89422e07e7afd38b4d979b73382f8f8269d3\",\n    \"tokenType\": \"Bearer\",\n    \"expiresIn\": \"900\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Inquiry VA",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment');\r",
+							"var timestamp = moment().format(\"YYYY-MM-DDTHH:mm:ssZ\");\r",
+							"\r",
+							"const fullPath = pm.request.url.getPathWithQuery();\r",
+							"var host = pm.environment.get('baseUrl');\r",
+							"var accessToken = pm.environment.get('token');\r",
+							"var url = \"http://184.169.41.93:5555/api/v1/utilities/signature-service\"\r",
+							"let body = pm.request.body ? pm.request.body.raw : '';\r",
+							"pm.environment.set('timestamp', timestamp);\r",
+							"pm.sendRequest({\r",
+							"    url: url,\r",
+							"    method: 'POST',\r",
+							"    header: {\r",
+							"        'Accept': 'application/json',\r",
+							"        'Content-Type': 'application/json',\r",
+							"        'Authorization': 'Basic QWRtaW5pc3RyYXRvcjptYW5hZ2U='\r",
+							"    },\r",
+							"    body: {\r",
+							"        mode: 'raw',\r",
+							"        raw: JSON.stringify({\r",
+							"            \"requestUrl\": fullPath,\r",
+							"            \"accessToken\": accessToken,\r",
+							"            \"timestamp\": timestamp,\r",
+							"            \"payload\": body,\r",
+							"            \"secretKey\": \"bcaf0342-6167-4704-bb69-2be074bb8703\",\r",
+							"            \"httpMethod\": \"POST\"\r",
+							"        })\r",
+							"    }\r",
+							"}, function (err, res) {\r",
+							"    console.log(res.json().generatedSignature);\r",
+							"    console.log(fullPath);\r",
+							"    console.log(accessToken);\r",
+							"    console.log(timestamp);\r",
+							"    console.log(body);\r",
+							"    pm.environment.set(\"gen_signature\", res.json().generatedSignature);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-TIMESTAMP",
+						"value": "{{timestamp}}",
+						"type": "text"
+					},
+					{
+						"key": "X-SIGNATURE",
+						"value": "{{gen_signature}}",
+						"type": "text"
+					},
+					{
+						"key": "X-EXTERNAL-ID",
+						"value": "123456111",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "CHANNEL-ID",
+						"value": "95231",
+						"type": "text"
+					},
+					{
+						"key": "X-PARTNER-ID",
+						"value": "20777",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"partnerServiceId\": \" 123451\",\r\n    \"customerNo\": \"123456789012345678\",\r\n    \"virtualAccountNo\": \"12345123456789012345678\",\r\n    \"trxDateInit\": \"2022-02-12T17:29:57+07:00\",\r\n    \"channelCode\": 6011,\r\n    \"language\": \"\",\r\n    \"amount\": {\r\n        \"value\": \"100000.00\",\r\n        \"currency\": \"IDR\"\r\n    },\r\n    \"hashedSourceAccountNo\": \"\",\r\n    \"sourceBankCode\": \"014\",\r\n    \"additionalInfo\": {},\r\n    \"passApp\": \"\",\r\n    \"inquiryRequestId\": \"202202110909311234500001136962\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://184.169.41.93:5555/gateway/apiVaSnapBCA/1.0/inquiry"
+			},
+			"response": [
+				{
+					"name": "Inquiry VA",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-TIMESTAMP",
+								"value": "{{timestamp}}",
+								"type": "text"
+							},
+							{
+								"key": "X-SIGNATURE",
+								"value": "{{gen_signature}}",
+								"type": "text"
+							},
+							{
+								"key": "X-EXTERNAL-ID",
+								"value": "123456111",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "CHANNEL-ID",
+								"value": "95231",
+								"type": "text"
+							},
+							{
+								"key": "X-PARTNER-ID",
+								"value": "20777",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"partnerServiceId\": \" 123451\",\r\n    \"customerNo\": \"123456789012345678\",\r\n    \"virtualAccountNo\": \"12345123456789012345678\",\r\n    \"trxDateInit\": \"2022-02-12T17:29:57+07:00\",\r\n    \"channelCode\": 6011,\r\n    \"language\": \"\",\r\n    \"amount\": {\r\n        \"value\": \"100000.00\",\r\n        \"currency\": \"IDR\"\r\n    },\r\n    \"hashedSourceAccountNo\": \"\",\r\n    \"sourceBankCode\": \"014\",\r\n    \"additionalInfo\": {},\r\n    \"passApp\": \"\",\r\n    \"inquiryRequestId\": \"202202110909311234500001136962\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://184.169.41.93:5555/gateway/apiVaSnapBCA/1.0/inquiry"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Length",
+							"value": "635"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"2002400\",\n    \"responseMessage\": \"Successful\",\n    \"virtualAccountData\": {\n        \"inquiryStatus\": \"00\",\n        \"inquiryReason\": {\n            \"english\": \"Success\",\n            \"indonesia\": \"Sukses\"\n        },\n        \"partnerServiceId\": \" 123451\",\n        \"customerNo\": \"123456789012345678\",\n        \"virtualAccountNo\": \"12345123456789012345678\",\n        \"virtualAccountName\": \"Jokul Doe\",\n        \"virtualAccountEmail\": \"john@email.com\",\n        \"virtualAccountPhone\": \"6281828384858\",\n        \"inquiryRequestId\": \"202202110909314440200001136962\",\n        \"totalAmount\": {\n            \"value\": \"100000.00\",\n            \"currency\": \"IDR\"\n        },\n        \"subCompany\": \"00000\",\n        \"billDetails\": [\n            {\n                \"billCode\": \"01\",\n                \"billNo\": \"123456789012345678\",\n                \"billName\": \"Bill A for Jan\",\n                \"billShortName\": \"Bill A\",\n                \"billDescription\": {\n                    \"english\": \"Maintenance\",\n                    \"indonesia\": \"Pemeliharaan\"\n                },\n                \"billSubCompany\": \"00000\",\n                \"billAmount\": {\n                    \"value\": \"100000.00\",\n                    \"currency\": \"IDR\"\n                },\n                \"billAmountLabel\": \"Total Tagihan\",\n                \"billAmountValue\": \"Rp. 100.000,-\",\n                \"additionalInfo\": {}\n            }\n        ],\n        \"freeTexts\": [\n            {\n                \"english\": \"Free text\",\n                \"indonesia\": \"Tulisan bebas\"\n            }\n        ],\n        \"virtualAccountTrxType\": \"C\",\n        \"feeAmount\": {\n            \"value\": \"\",\n            \"currency\": \"\"\n        }\n    },\n    \"additionalInfo2\": {\n        \"label\": {\n            \"indonesia\": \"Bulan\",\n            \"english\": \"Month\"\n        },\n        \"value\": {\n            \"indonesia\": \"Januari\",\n            \"english\": \"January\"\n        }\n    },\n    \"partnerServiceId\": \" 123451\",\n    \"customerNo\": \"123456789012345678\",\n    \"virtualAccountNo\": \"12345123456789012345678\",\n    \"trxDateInit\": \"2022-02-12T17:29:57+07:00\",\n    \"channelCode\": 6011,\n    \"language\": \"\",\n    \"amount\": {\n        \"value\": \"100000.00\",\n        \"currency\": \"IDR\"\n    },\n    \"hashedSourceAccountNo\": \"\",\n    \"sourceBankCode\": \"014\",\n    \"additionalInfo\": {\n        \"additionalInfo1\": {\n            \"label\": {\n                \"indonesia\": \"Unit\",\n                \"english\": \"Unit\"\n            },\n            \"value\": {\n                \"indonesia\": \"10C\",\n                \"english\": \"10C\"\n            }\n        }\n    },\n    \"passApp\": \"\",\n    \"inquiryRequestId\": \"202202110909311234500001136962\"\n}"
+				}
+			]
+		},
+		{
+			"name": "balance inqury",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment');\r",
+							"var timestamp = moment().format(\"YYYY-MM-DDTHH:mm:ssZ\");\r",
+							"\r",
+							"const fullPath = pm.request.url.getPathWithQuery();\r",
+							"var host = pm.environment.get('baseUrl');\r",
+							"var accessToken = pm.environment.get('token');\r",
+							"var url = \"http://184.169.41.93:5555/api/v1/utilities/signature-service\"\r",
+							"let body = pm.request.body ? pm.request.body.raw : '';\r",
+							"pm.environment.set('timestamp', timestamp);\r",
+							"pm.sendRequest({\r",
+							"    url: url,\r",
+							"    method: 'POST',\r",
+							"    header: {\r",
+							"        'Accept': 'application/json',\r",
+							"        'Content-Type': 'application/json',\r",
+							"        'Authorization': 'Basic QWRtaW5pc3RyYXRvcjptYW5hZ2U='\r",
+							"    },\r",
+							"    body: {\r",
+							"        mode: 'raw',\r",
+							"        raw: JSON.stringify({\r",
+							"            \"requestUrl\": fullPath,\r",
+							"            \"accessToken\": accessToken,\r",
+							"            \"timestamp\": timestamp,\r",
+							"            \"payload\": body,\r",
+							"            \"secretKey\": \"bcaf0342-6167-4704-bb69-2be074bb8703\",\r",
+							"            \"httpMethod\": \"POST\"\r",
+							"        })\r",
+							"    }\r",
+							"}, function (err, res) {\r",
+							"    console.log(res.json().generatedSignature);\r",
+							"    console.log(fullPath);\r",
+							"    console.log(accessToken);\r",
+							"    console.log(timestamp);\r",
+							"    console.log(body);\r",
+							"    pm.environment.set(\"gen_signature\", res.json().generatedSignature);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-TIMESTAMP",
+						"value": "{{timestamp}}",
+						"type": "text"
+					},
+					{
+						"key": "X-SIGNATURE",
+						"value": "{{gen_signature}}",
+						"type": "text"
+					},
+					{
+						"key": "X-EXTERNAL-ID",
+						"value": "123456111",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "CHANNEL-ID",
+						"value": "95231",
+						"type": "text"
+					},
+					{
+						"key": "X-PARTNER-ID",
+						"value": "20777",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"partnerServiceId\": \" 123451\",\r\n    \"customerNo\": \"123456789012345678\",\r\n    \"virtualAccountNo\": \"12345123456789012345678\",\r\n    \"trxDateInit\": \"2022-02-12T17:29:57+07:00\",\r\n    \"channelCode\": 6011,\r\n    \"language\": \"\",\r\n    \"amount\": {\r\n        \"value\": \"100000.00\",\r\n        \"currency\": \"IDR\"\r\n    },\r\n    \"hashedSourceAccountNo\": \"\",\r\n    \"sourceBankCode\": \"014\",\r\n    \"additionalInfo\": {},\r\n    \"passApp\": \"\",\r\n    \"inquiryRequestId\": \"202202110909311234500001136962\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://184.169.41.93:5555/gateway/apiVaSnapBCA/1.0/inquiry"
+			},
+			"response": []
+		}
+	]
+}
