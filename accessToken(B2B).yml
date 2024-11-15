@@ -1,0 +1,81 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: API Access Token B2B
+host: localhost:5555
+basePath: /{version}/access-token/b2b
+schemes:
+  - http
+paths:
+  /access-token/b2b:
+    post:
+      tags:
+        - Access Token Request (B2B)
+      operationId: AccessTokenB2B
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          type: string
+          description: Content-Type of the request, e.g., application/json
+        - in: header
+          name: X-TIMESTAMP
+          required: true
+          type: string
+          description: Timestamp of the request in string format
+        - in: header
+          name: X-CLIENT-KEY
+          required: true
+          type: string
+          description: Unique client key for authentication
+        - in: header
+          name: X-SIGNATURE
+          required: true
+          type: string
+          description: Signature for request validation
+        - in: body
+          name: body
+          required: false
+          schema:
+            $ref: '#/definitions/AccessTokenRequest'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/AccessTokenResponse'
+        '400':
+          description: Invalid Input
+        '401':
+          description: Unauthorized or Invalid Token
+        '500':
+          description: Internal Server Error
+definitions:
+  AccessTokenResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+        description: Response Code
+      responseMessage:
+        type: string
+        description: Response Message
+      accessToken:
+        type: string
+        description: Access Token
+      tokenType:
+        type: string
+        description: Token Type
+      expiresIn:
+        type: string
+        description: Token Expiry
+  AccessTokenRequest:
+    type: object
+    properties:
+      grant_type:
+        type: string
+        description: Grant Type
+        example: client_credentials
